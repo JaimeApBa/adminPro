@@ -1,6 +1,8 @@
 
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 // Rutas
 import { APP_ROUTES } from './app.routes';
@@ -18,12 +20,12 @@ import { RegisterComponent } from './login/register.component';
     AppComponent,
     LoginComponent,
     RegisterComponent
-
   ],
   imports: [
     BrowserModule,
     APP_ROUTES,
-    PagesModule
+    PagesModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
