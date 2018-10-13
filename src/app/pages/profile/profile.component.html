@@ -37,7 +37,11 @@
                 <h6 class="card-subtitle"> {{usuario.nombre}}</h6>
                 <img *ngIf="!imagenTemp" [src]="usuario.img |imagen" class="w150">
                 <img *ngIf="imagenTemp" [src]="imagenTemp" class="w150">
-                <input type="file" (change)="seleccionImagen($event.target.files[0])">
+                <label class="custom-file">
+                    <input type="file" (change)="seleccionImagen($event.target.files[0])" class="custom-file-input">
+                    <span class="custom-file-control"></span>
+                </label>
+
                 <br><br>
                 <button (click)="cambiarImagen()" [disabled]="!imagenSubir" type="button" class="btn btn-block btn-success waves-effect waves-light m-r-10">
                     <i class="fa fa-save"></i>
