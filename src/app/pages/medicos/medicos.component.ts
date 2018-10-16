@@ -1,4 +1,5 @@
-import { URL_SERVICIOS } from './../../config/config';
+import { Hospital } from './../../models/hospital.model';
+
 import { MedicoService } from './../../services/service.index';
 import { ModalUploadService } from 'src/app/components/modal-upload/modal-upload.service';
 import { Component, OnInit } from '@angular/core';
@@ -17,7 +18,7 @@ export class MedicosComponent implements OnInit {
   desde: number = 0;
   cargando: boolean = true;
   inputDisabled: boolean = false;
-  medicos: Medico[];
+  medicos: Medico[] = [];
 
   constructor(
     public _medicosService: MedicoService,

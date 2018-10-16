@@ -4,14 +4,16 @@ import { SubirArchivoService } from './subirArchivo/subir-archivo.service';
 import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { LoginGuardGuard } from './guards/login-guard.guard';
+import { AdminGuard } from './guards/admin.guard';
+
 import {
   SettingsService,
   SidebarService,
   SharedService,
   UsuarioService,
   HospitalService,
-  MedicoService
+  MedicoService,
+  LoginGuardGuard
 } from './service.index';
 
 
@@ -24,12 +26,13 @@ import {
     SettingsService,
     SharedService,
     SidebarService,
-    UsuarioService,
-    LoginGuardGuard,
     SubirArchivoService,
     ModalUploadService,
+    UsuarioService,
     HospitalService,
-    MedicoService
+    MedicoService,
+    LoginGuardGuard,
+    AdminGuard
   ],
   declarations: []
 })
