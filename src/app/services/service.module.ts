@@ -5,6 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AdminGuard } from './guards/admin.guard';
+import { VerficaTokenGuard } from './guards/verfica-token.guard';
 
 import {
   SettingsService,
@@ -32,7 +33,8 @@ import {
     HospitalService,
     MedicoService,
     LoginGuardGuard,
-    AdminGuard
+    AdminGuard,
+    VerficaTokenGuard
   ],
   declarations: []
 })
